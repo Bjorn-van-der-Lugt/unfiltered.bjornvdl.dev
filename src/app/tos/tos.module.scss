@@ -1,0 +1,45 @@
+.pageContainer {
+  max-width: var(--max-width);
+  margin: calc( var(--margin-vertical) * 2 ) auto var(--margin-horizontal) auto;
+  padding: calc(var(--padding-vertical) * 0.5) calc(var(--padding-horizontal) * 1.5);
+
+  @media (min-width: 768px) {
+    margin: calc( var(--margin-vertical) * 4 ) auto var(--margin-horizontal) auto;
+    padding: calc(var(--padding-vertical) * 0.5) calc(var(--padding-horizontal) * 0.5);
+  }
+
+  @media (min-width: 1024px) and (orientation: portrait) {
+    padding: 0 calc(var(--padding-horizontal) * 0.5);
+    margin: calc( var(--margin-vertical) * 7.5 ) auto var(--margin-horizontal) auto;
+  }
+
+  @media (min-width: 1280px) {
+    max-width: var(--max-width-II);
+    margin: calc( var(--margin-vertical) * 6 ) auto var(--margin-horizontal) auto;
+  }
+}
+  .section {
+    margin: calc(var(--margin-vertical) * 2 ) 0;
+    padding: 0 calc( var(--padding-horizontal) * 2 );
+
+    .heading,
+    .text {
+      margin: calc(var(--margin-vertical) * 2) 0;
+    }
+
+    .link {
+      color: var(--link-color);
+
+    &:focus-visible {
+        color: var(--link-color-focus);
+        outline: var(--outline-link-focus);
+        border-radius: var(--border-radius-III);
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          color: var(--link-color-hover);
+        }
+      }
+    }
+  }

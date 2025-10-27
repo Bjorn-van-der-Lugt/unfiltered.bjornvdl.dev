@@ -1,0 +1,31 @@
+.footer {
+  width: 100%;
+  background-color: #0A0A0A;
+  color: var(--color-II);
+  cursor: default;
+  padding: 1rem 0;
+
+  .ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+
+    .link {
+      color: var(--color-II);
+      padding: calc( var(--padding-vertical) / 2 ) 0;
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          color: var(--link-color-hover-II);
+        }
+      }
+
+      &:focus-visible {
+        color: var(--link-color-focus-II);
+      }
+    }
+  }
+}

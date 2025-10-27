@@ -1,0 +1,278 @@
+:root {
+    
+    /* TYPOGRAPHY */
+
+    --font-size: 16px;
+    --line-height: 1.5rem;
+
+    /* SPACING */
+
+    --max-width: 50rem;
+    --max-width-II: 65rem;
+    --margin-vertical: 1rem;
+    --margin-horizontal: 1rem;
+    --padding-horizontal: 1rem;
+    --padding-vertical: 1rem;
+    --border-radius: 4px;
+    --border-radius-II: 8px;
+    --border-radius-III: 16px;
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!! DARK MODE !!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+    
+    /* FONT COLORS */
+
+    --color: #E6E6E6;
+    --color-II: ;
+    --color-III: ;
+    --color-heading: #FFFFFF;
+    --color-heading-II: ;
+    --color-heading-III: ;
+
+    /* BACKGROUND COLORS */
+
+  --background-color: #0A0A0A;
+  --background-color-II: #000000;
+
+    /* INTERACTIVE */
+    
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    --box-shadow-II: 0 4px 8px rgba(255, 255, 255, 0.2);
+    --box-shadow-III: 0 4px 8px rgba(0, 0, 0, 0.9);
+    
+    --border: ;
+    --border-II: ;
+    --border-III: ;
+
+    /* BUTTONS */
+
+    --button-color: #FFF;
+    --button-color-hover: #3B82F6;
+    --button-color-focus: #3B82F6;
+    --button-color-disabled: ;
+
+    --button-bg: #fdfdfd;
+    --button-bg-hover: #0A0A0A;
+    --button-bg-focus: #0A0A0A;
+    --button-bg-disabled: ;
+
+    --button-bg-II: linear-gradient(to bottom,#333333,#000000);
+    --button-bg-hover-II: linear-gradient(to bottom, #555555, #000000, #000000);
+    --button-bg-focus-II: linear-gradient(to bottom, #555555, #000000, #000000);
+    
+
+    /* LINKS */
+
+    --link-color: #3B82F6;
+    --link-color-hover: #5DA4F8;
+    --link-color-focus: #5DA4F8;
+    --link-color-visited: #5DA4F8;
+
+    --link-bg-focus: ;
+
+    --link-color-II: ;
+    --link-color-hover-II: #3B82F6;
+    --link-color-focus-II: #3B82F6;
+    --link-color-visited-II: ;
+
+    --link-bg-focus-II: ;
+    
+    --link-color-III: ;
+    --link-color-hover-III: ;
+    --link-color-focus-III: ;
+    --link-color-visited-III: ;
+
+    --link-bg-focus-III: ;
+
+    /* INPUT */
+
+    --input-color: ;
+    --input-color-focus: ;
+    --input-color-invalid: ;
+    --input-color-error-message: ;
+    --input-color-error-message-focus: ;
+
+    --input-bg: ;
+    --input-bg-focus: ;
+
+    /* OUTLINES */
+
+    --outline-button-focus: ;
+    --outline-link-focus: ;
+    --outline-input-focus: ;
+    --outline-input-invalid: ;   
+}
+
+.light {
+ 
+     /* FONT COLORS */
+ 
+     --color: #333;
+     --color-II: #FFF;
+     --color-III: ;
+     --color-heading: #111;
+     --color-heading-II: ;
+     --color-heading-III: ;
+ 
+     /* BACKGROUND COLORS */
+ 
+     --background-color: #fefefe;
+     --background-color-II: #EEEEEE;
+
+     /* INTERACTIVE */
+ 
+     --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+     --box-shadow-II: 0 4px 8px rgba(0, 0, 0, 0.9);
+     --box-shadow-III: 0 4px 8px rgba(0, 0, 0, 0.3);
+     --border: ;
+     --border-II: ;
+     --border-III: ;
+ 
+     /* BUTTONS */
+ 
+     --button-color: #FFFFFF;
+     --button-color-hover: #3B82F6;
+     --button-color-focus: #3B82F6;
+     --button-color-disabled: ;
+ 
+     --button-bg: #1A1A1A;
+     --button-bg-hover: #0A0A0A;
+     --button-bg-focus: #0A0A0A;
+     --button-bg-disabled: ;
+
+     --button-bg-II: linear-gradient(to bottom,#333333,#000000);
+     --button-bg-hover-II: linear-gradient(to bottom, #555555, #000000, #000000);
+     --button-bg-focus-II: linear-gradient(to bottom, #555555, #000000, #000000);
+    
+     /* LINKS */
+ 
+     --link-color: #3B82F6;
+     --link-color-hover: #1960D4;
+     --link-color-focus: #1960D4;
+     --link-color-visited: #1960D4;
+ 
+     --link-bg-focus: ;
+
+     --link-color-II: ;
+     --link-color-hover-II: #3B82F6;
+     --link-color-focus-II: #3B82F6;
+     --link-color-visited-II: ;
+ 
+     --link-bg-focus-II: ;
+     
+     --link-color-III: ;
+     --link-color-hover-III: ;
+     --link-color-focus-III: ;
+     --link-color-visited-III: ;
+ 
+     --link-bg-focus-III: ;
+ 
+     /* INPUT */
+ 
+     --input-color: ;
+     --input-color-focus: ;
+     --input-color-invalid: ; 
+     --input-color-error-message: ; 
+     --input-color-error-message-focus: ; 
+ 
+     --input-bg: ;
+     --input-bg-focus: ;
+ 
+     /* OUTLINES */
+ 
+     --outline-button-focus: ;
+     --outline-link-focus: ;
+     --outline-input-focus: ;
+     --outline-input-invalid: ;   
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background-color);
+    font-size: var(--font-size);
+    font-family: var(--font-roboto), Arial, Helvetica, sans-serif;
+    line-height: var(--line-height);
+    overflow-x: hidden;
+    color: var(--color);
+}
+
+main, footer {
+  transition: transform 0.3s ease;
+
+  &.noTransition {
+    @media (min-width: 768px) {
+      transition: none;
+    }
+  }
+}
+
+body.menuOpen footer,
+body.menuOpen main {
+  transform: translateX(13rem);
+
+  @media (min-width: 768px) and (orientation: portrait) {
+    transform: translateX(calc(15rem - 1px));
+  }
+
+  @media (orientation: landscape) {
+    transform: translateX(0);
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-montserrat), Helvetica, Arial, sans-serif;
+  color: var(--color-heading);
+}
+
+h1 { font-size: 1.5rem; }    
+h2 { font-size: 1.25rem; }  
+h3 { font-size: 1.125rem; }  
+h4 { font-size: 1.0625rem; } 
+h5 { font-size: 1rem; }      
+h6 { font-size: 0.95rem; }   
+
+@media (min-width: 360px) {
+  h1 { font-size: 1.75rem; line-height: 1.2; }   
+  h2 { font-size: 1.375rem; }  
+  h3 { font-size: 1.25rem; }   
+  h4 { font-size: 1.125rem; }  
+  h5 { font-size: 1rem; }
+  h6 { font-size: 0.95rem; }
+}
+
+
+@media (min-width: 768px) {
+  h1 { font-size: 2.55rem; line-height: 1.2; }
+  h2 { font-size: 2.25rem; line-height: 1.3; }
+  h3 { font-size: 1.75rem; line-height: 1.35; }
+  h4 { font-size: 1.5rem; line-height: 1.4; }
+  h5 { font-size: 1.25rem; line-height: 1.5; }
+  h6 { font-size: 1rem; line-height: 1.5; }
+}
+
+ul { list-style: none; } 
+
+a { text-decoration: none; }
+
+button, a, footer, header { 
+    -webkit-tap-highlight-color: transparent; 
+    cursor: pointer; 
+    white-space: nowrap; 
+    font-family: var(--font-montserrat), Helvetica, Arial, sans-serif;
+} 
