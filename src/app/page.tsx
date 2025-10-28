@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import Image from "next/image";
 import styles from "./page.module.scss";
 import ContactOptions from "./components/Contact/ContactOptions/ContactOptions";

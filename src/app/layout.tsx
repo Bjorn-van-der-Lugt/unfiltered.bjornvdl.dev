@@ -1,3 +1,5 @@
+  /* eslint-disable @typescript-eslint/no-explicit-any */
+  
   import { ReactNode } from 'react';
   import { Montserrat, Roboto } from 'next/font/google';
   import './globals.scss';
