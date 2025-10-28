@@ -26,16 +26,16 @@
     openGraph: {
       title: 'Björn van der Lugt',
       description: 'Unfiltered Perspective on the Human Condition — A descent into the bedrock of our species, leaving behind moral absolutism and observing through a lens of pragmatism',
-      url: 'blog.bjornvdl.dev',
+      url: 'unfiltered.bjornvdl.dev',
       siteName: 'Unfiltered Perspective | Björn van der Lugt',
       type: 'website',
       locale: 'en_EN',
       images: [
         {
-          url: '',
+          url: '/opengraph.jpg',
           width: 1200,
-          height: 675,
-          alt: '',
+          height: 884,
+          alt: 'Unfiltered Perspective Open Graph image',
         },
       ],
     },
@@ -43,7 +43,7 @@
       card: 'summary_large_image',
       title: 'Unfiltered Perspective | Björn van der Lugt',
       description: 'Unfiltered Perspective on the Human Condition — A descent into the bedrock of our species, leaving behind moral absolutism and observing through a lens of pragmatism',
-      images: [''],
+      images: ['/opengraph.jpg'],
     },
   };
 
