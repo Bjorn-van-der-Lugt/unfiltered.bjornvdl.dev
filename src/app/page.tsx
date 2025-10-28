@@ -1,32 +1,60 @@
 import Image from "next/image";
 import styles from "./page.module.scss";
+import ContactOptions from "./components/Contact/ContactOptions/ContactOptions";
+import BaseMap from "./components/Contact/BaseMap/BaseMap";
 import Link from "next/link";
-import ContactMethods from "./components/ContactMethods/ContactMethods";
+import { sanityFetch } from "@/sanity/lib/live";
+import { POSTS_QUERY } from "@/sanity/queries";
+import { urlFor } from "@/sanity/urlFor";
 
-export default function Home() {
+export default async function Home() {
+  const { data: posts } = await sanityFetch({ query: POSTS_QUERY });
+
   return (
-    <div className={styles.page}>
-      <div id="landing" className={`${styles.landing} ${styles.section}`}>
-        <div className={styles.overlay}>
-          <div className={styles.wrapper}>
-            <h1 className={styles.heading}>Everything UgaBuga</h1>
-            <p className={styles.text}>Unfiltered perspectives on everything you don't wish to think about</p>
-            <a className={styles.cta} href="#home">Start Reading </a>
-          </div>
-          <div id="home" className={styles.home}></div>
-        </div>
-      </div>
-      <div id="contact" className={`${styles.contact} ${styles.section}`}>
-        <h2 className={styles.heading}>Reach out</h2>
+    <div className={styles.pageContainer}>
+      <section id="landing" className={`${styles.landing} ${styles.section}`}>
+        <h1 className={styles.heading}>Unfiltered Perspective</h1>
         <p className={styles.text}>
-          I’m a Web Developer and Business Consultant helping solopreneurs and small businesses build digital solutions that convert clients and customers.
-          But I'm open to way more than just web dev work. I'm passionate about weightlifting, martial arts, psychology, 
-          art, tattoos, piercings and plenty of other weird shit.
-          Always down for business opportunities, creative collaborations, or just connecting with interesting people relatively nearby. 
+          Unfiltered Perspective on the Human Condition — A descent into the bedrock of our species, leaving behind moral absolutism and observing through a lens of pragmatism
         </p>
-        <ContactMethods/>
-        <iframe className={styles.map} width="100%" height="450" loading="lazy" src="https://maps.google.com/maps?q=51.60,5.20&z=4&output=embed"></iframe>
-      </div>
+      </section>
+
+      <section id="blog" className={`${styles.blog} ${styles.section}`}>
+        <ul className={styles.ul}>
+          {posts?.map((post: any) => (
+            <li key={post._id} className={styles.list}>
+              <h3 className={styles.heading}>{post.title}</h3>
+                <p className={styles.text}>{post.excerpt}</p>
+                <p>{post.author?.name}: {post.publishedAt?.slice(0, 10)}</p>
+              <Link href={`${post.slug}`}>
+                {post.mainImage && (
+                  <Image
+                    src={urlFor(post.mainImage).width(800).height(450).url()}
+                    alt={post.title}
+                    width={800}
+                    height={450}
+                    className={styles.image}
+                  />
+                )}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section id="contact" className={`${styles.contact} ${styles.section}`}>
+        <h2 className={styles.heading}>Reach out <i className="fa-sharp-duotone fa-solid fa-paper-plane"></i></h2>
+        <p className={styles.text}>
+          I’m a Web Developer and Business Consultant helping freelancers and small businesses build digital solutions that convert clients and customers. 
+          But I’m always open to new business opportunities of any kind, creative collaborations, or just connecting with interesting people nearby.
+        </p>
+        <ContactOptions />
+        <h3 className={styles.heading}>Rooted in the Netherlands, Working Worldwide</h3>
+        <p className={styles.text}>
+          <strong>Bases:</strong> Bergen op Zoom (NL) [ main ] | near Rzeszów (PL) [ secondary ]
+        </p>
+        <BaseMap />
+      </section>
     </div>
   );
 }

@@ -1,0 +1,106 @@
+.ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0;
+    margin: 
+      calc(var(--margin-vertical) * .75 ) 
+      auto 
+      calc(var(--margin-vertical) * .75 )  
+      calc( var(--margin-horizontal) * -0.85 );
+
+    @media (min-width: 768px) and (orientation: portrait), (min-width: 1024px), (orientation: landscape) {
+      gap: calc(var(--margin-horizontal) * 2 );
+      margin: 
+        calc(var(--margin-vertical) * 2 ) 
+        auto  
+        calc(var(--margin-vertical) * 2)
+        calc( var(--margin-horizontal) * -0.85 )
+    }
+
+    .list {
+      margin-block: var(--margin-vertical);
+    }
+
+    .link {
+      font-size: 1rem;
+      padding: calc(var(--padding-vertical) / 2) calc(var(--padding-horizontal) * 1 );
+      border-radius: var(--border-radius-IV);
+      white-space: nowrap;
+      color: var(--color);
+
+      i {
+        margin-right: calc( var(--margin-horizontal) / 2 );
+        color: var(--link-color)
+      }
+
+      @media (min-width: 768px) and (orientation: portrait), (min-width: 1024px), (orientation: landscape) {
+        font-size: 1.35rem;
+      }
+
+      &:focus-visible {
+        outline: var(--outline-link-focus);
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          box-shadow: var(--box-shadow);
+        }
+      }
+    }
+  }
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem 1rem;
+    margin: 2rem 0;
+
+    @media (min-width: 712px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .item {
+        background-color: var(--background-color-II);
+        border: 1px solid rgba(175, 175, 175, 0.5);
+        padding: calc( var(--padding-vertical) / 2 ) calc( var(--padding-horizontal) * 1 );
+
+        .link {
+          color: var(--link-color);
+          border-radius: var(--border-radius-IV);
+
+          @media( hover: hover) and (pointer: fine) {
+            &:hover {
+              color: var(--link-color-hover);
+            }
+          }
+
+          &:focus-visible {
+            color: var(--link-color-hover);
+            outline: var(--outline-link-focus);
+          }
+        }
+    }
+}
+
+.grid .link {
+  color: var(--color);
+
+  .href {
+    color: var(--link-color);
+    
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            color: var(--link-color-hover);
+            font-size: 1rem;
+        }
+    }
+
+    &:focus-visible {
+        color: var(--link-color-focus);
+        outline: var(--outline-link-focus);
+        border-radius: var(--border-radius-IV);
+    }
+  } 
+}

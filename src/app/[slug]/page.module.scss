@@ -1,0 +1,29 @@
+@use "@/app/sectionContainer" as *;
+
+@use "@/app/sectionContainer";
+
+.section {
+  @include sectionContainer;
+
+  @media (min-width: 1024px) {
+    &:first-of-type {
+      margin-top: calc( var(--margin-vertical) * 7 );
+    }
+  }
+}
+
+.image {
+    display: block;
+    width: 100%; height: auto;
+    margin: calc( var(--margin-vertical) * 2 ) auto;
+    border-radius: var(--border-radius-II);
+}
+
+.ul, .ol {
+    margin-block: calc( var(--margin-vertical) * 2 );
+
+    .list {
+        margin-block: calc( var(--margin-vertical) * 2 );
+        font-size: 1.15rem;
+    }
+}

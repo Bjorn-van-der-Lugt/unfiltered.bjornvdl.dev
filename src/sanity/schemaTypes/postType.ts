@@ -12,6 +12,13 @@ export const postType = defineType({
       type: 'string',
     }),
     defineField({
+      name: 'excerpt',
+      title: 'Excerpt',
+      type: 'text',
+      description: 'A short summary of the post (used in previews and meta descriptions)',
+      rows: 3,
+    }),
+    defineField({
       name: 'slug',
       type: 'slug',
       options: {
@@ -63,6 +70,7 @@ export const postType = defineType({
       ],
     }),
   ],
+  
   preview: {
     select: {
       title: 'title',

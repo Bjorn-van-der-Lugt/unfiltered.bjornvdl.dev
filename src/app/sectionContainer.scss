@@ -1,0 +1,43 @@
+@mixin sectionContainer {
+  margin: calc(var(--margin-vertical) * 2 ) auto;
+  max-width: var(--max-width);
+  padding: 0 calc(var(--padding-horizontal) * 1.25 );
+  scroll-margin-top: calc(var(--margin-vertical) * 2 );
+  scroll-margin-left: calc(var(--menu-width) + 2.5rem);
+
+  @media (min-width: 412px) {
+    padding: 0 calc(var(--padding-horizontal) * 1.5 );
+  }
+
+  @media (min-width: 768px) {
+    margin: calc(var(--margin-vertical) * 4) auto;
+  }
+
+  @media (min-width: 768px) and (orientation: landscape) {
+    scroll-margin-top: calc(var(--margin-vertical) * 2);
+  }
+
+  @media (min-width: 1024px) and (orientation: landscape) {
+    max-width: var(--max-width-II);
+    padding: 0 calc(var(--padding-horizontal) / 2 );
+    margin: calc(var(--margin-vertical) * 4 ) auto;
+    scroll-margin-top: calc(var(--margin-vertical) * 5 );
+    scroll-margin-left: calc(var(--menu-width) + 0.5rem );
+  }
+
+  @media (min-width: 1024px) and (orientation: portrait) {
+    max-width: var(--max-width-II);
+    padding: 0 calc(var(--padding-horizontal) / 2 );
+    margin: calc(var(--margin-vertical) * 4 ) auto;
+    scroll-margin-top: calc(var(--margin-vertical) * 5.5 );
+  }
+
+  @media (min-width: 1280px) {
+    scroll-margin-top: calc(var(--margin-vertical) * 7 );
+  }
+
+  .heading,
+  .text {
+    margin: calc(var(--margin-vertical) * 2.25 ) 0;
+  }
+}

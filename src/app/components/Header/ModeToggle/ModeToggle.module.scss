@@ -1,0 +1,19 @@
+.modeToggle {
+  background-color: transparent;
+  border: none;
+  border-radius: var(--border-radius-III);
+  color: var(--link-color-II);
+  font-size: 1.15rem;
+  padding: calc(var(--padding-vertical) / 2 ) calc(var(--padding-horizontal) / 2 );
+  text-align: center;
+
+  &:focus-visible {
+    color: var(--link-color-focus-II);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: var(--link-color-hover-II);
+    }
+  }    
+}

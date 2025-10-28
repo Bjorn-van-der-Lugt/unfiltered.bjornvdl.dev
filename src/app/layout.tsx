@@ -3,7 +3,7 @@
   import './globals.scss';
   import Header from './components/Header/Header';
   import Footer from './components/Footer/Footer';
-  import { headers } from 'next/headers';
+  import { headers, cookies } from 'next/headers';
 
 
   const montserrat = Montserrat({
@@ -19,22 +19,17 @@
   });
 
   export const metadata = {
-    title: 'Everything UgaBuga',
+    title: 'Unfiltered Perspective | Björn van der Lugt',
     description:
-      '',
-    keywords: [
-      '',
-      ''
-    ],
-
-    authors: [{ name: '' }],
+      'Unfiltered Perspective on the Human Condition — A descent into the bedrock of our species, leaving behind moral absolutism and observing through a lens of pragmatism',
+    authors: [{ name: 'Björn van der Lugt' }],
     openGraph: {
-      title: '',
-      description: '',
-      url: '',
-      siteName: '',
+      title: 'Björn van der Lugt',
+      description: 'Unfiltered Perspective on the Human Condition — A descent into the bedrock of our species, leaving behind moral absolutism and observing through a lens of pragmatism',
+      url: 'blog.bjornvdl.dev',
+      siteName: 'Unfiltered Perspective | Björn van der Lugt',
       type: 'website',
-      locale: '',
+      locale: 'en_EN',
       images: [
         {
           url: '',
@@ -46,8 +41,8 @@
     },
     twitter: {
       card: 'summary_large_image',
-      title: '',
-      description: '',
+      title: 'Unfiltered Perspective | Björn van der Lugt',
+      description: 'Unfiltered Perspective on the Human Condition — A descent into the bedrock of our species, leaving behind moral absolutism and observing through a lens of pragmatism',
       images: [''],
     },
   };
@@ -59,32 +54,16 @@
   export default async function RootLayout({ children }: Props) {
     const headersList = await headers(); 
     const nonce = headersList.get('x-nonce') || undefined;
+    const cookieStore = await cookies();          
+    const theme = cookieStore.get('theme')?.value || 'light';
 
     return (
-      <html lang="en">
+      <html lang="en" className={theme} data-theme={theme}>
         <head>
           <link
             rel="stylesheet"
             href="/kit-bab82c5629-web/css/all.min.css"
             crossOrigin="anonymous"
-          />
-          <script
-            nonce={nonce}
-            dangerouslySetInnerHTML={{
-              __html: `
-                (function () {
-                  try {
-                    var stored = localStorage.getItem('theme');           // 'light' | 'dark' | null
-                    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                    var theme = stored || (prefersDark ? 'dark' : 'light');
-                    var root = document.documentElement;
-                    root.classList.remove('light','dark');
-                    root.classList.add(theme);
-                    root.setAttribute('data-theme', theme);
-                  } catch (e) {}
-                })();
-              `,
-            }}
           />
         </head>
         <body className={`${roboto.variable} ${montserrat.variable}`}>

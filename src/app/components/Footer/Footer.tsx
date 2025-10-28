@@ -7,6 +7,28 @@ export default function Footer() {
             <nav className={styles.nav}>
                 <ul className={styles.ul}>
                     <li className={styles.list}>
+                        <Link href="/#landing" className={styles.link}>Home</Link>
+                    </li>
+                    <li className={styles.list}>
+                        <Link href="/blog" className={styles.link}>Blog</Link>
+                    </li>
+                    <li className={styles.list}>
+                        <Link href="/#landing" className={styles.link}>About</Link>
+                    </li>
+                    <li className={styles.list}>
+                        <Link href="/#contact" className={styles.link}> Services</Link>
+                    </li>
+                    <li className={styles.list}>
+                        <Link href="/#contact" className={styles.link}> Contact</Link>
+                    </li>
+                    <li className={styles.list}>
+                        <a href="https://www.paypal.com/donate/?hosted_button_id=NCRQHDJWRPDHC"
+                        className={styles.link}
+                        rel="noopener noreferrer"
+                        target="_blank">Donate
+                        </a>
+                    </li>
+                    <li className={styles.list}>
                         <Link href="/privacy-policy" className={styles.link}>
                             Privacy-Policy
                         </Link>

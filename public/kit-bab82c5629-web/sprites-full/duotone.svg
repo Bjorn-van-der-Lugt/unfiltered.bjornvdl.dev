@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+<symbol id="mobile" viewBox="0 0 576 576">
+<path style="fill:var(--fa-secondary-color,currentColor);opacity:var(--fa-secondary-opacity,.4)" d="M112 400L112 480C112 515.3 140.7 544 176 544L400 544C435.3 544 464 515.3 464 480L464 400L112 400zM224 472C224 458.7 234.7 448 248 448L328 448C341.3 448 352 458.7 352 472C352 485.3 341.3 496 328 496L248 496C234.7 496 224 485.3 224 472z"/><path style="fill:var(--fa-primary-color,currentColor);opacity:var(--fa-primary-opacity,1)" d="M112 96C112 60.7 140.7 32 176 32L400 32C435.3 32 464 60.7 464 96L464 400L112 400L112 96z"/>
+</symbol>
+</svg>

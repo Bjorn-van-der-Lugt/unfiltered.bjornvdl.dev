@@ -3,18 +3,27 @@
   background-color: #0A0A0A;
   color: var(--color-II);
   cursor: default;
-  padding: 1rem 0;
+  padding: calc( var(--padding-vertical) * 1.5) 
+  calc( var(--padding-horizontal) * 1 )
+  calc( var(--padding-vertical) * 1.5)
+  calc( var(--padding-horizontal) * 1 );
+  color: var(--link-color-II);
 
   .ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 2rem;
     max-width: var(--max-width);
     margin: 0 auto;
 
+    @media (min-width: 1024px) {
+      max-width: var(--max-width-II);
+    }
+
     .link {
-      color: var(--color-II);
+      color: var(--link-color-II);
       padding: calc( var(--padding-vertical) / 2 ) 0;
 
       @media (hover: hover) and (pointer: fine) {
